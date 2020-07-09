@@ -1,6 +1,6 @@
 #dtypes
 
-input_all_paths = "./all_inputs.xslx"
+input_all_paths = "./all_inputs.xlsx"
 
 dtypes_sap = {
     'Ejercicio': 'str',
@@ -8,7 +8,6 @@ dtypes_sap = {
     'Clave de país': 'str',
     'Posición liquidez': 'str',
     'Nº documento': 'str',
-    'Fecha de pago': 'str', 'Fecha': 'str', 
     'Cuenta de mayor': 'str', 
     'Importe en moneda local': 'float', 
     'Importe en tercera moneda': 'float', 
@@ -19,3 +18,5 @@ dtypes_sap = {
     'Cuenta de compensación': 'str', 
     'Comentario': 'str'
     }
+
+fechas = ["Fecha de pago", "Fecha"]

@@ -1,15 +1,15 @@
 import pandas as pd
 import os
 
-def xlsx_to_csv(input_path, output_path, dtypes_sap):
+def xlsx_to_csv(input_path, output_path, dtypes_sap, fechas):
     files_input = os.listdir(input_path)
     files_output = os.listdir(output_path)
     for f in files_input:
         file_name = str(f[:-4])
         if file_name+"csv" not in files_output:
-            df = pd.read_excel(os.path.join(input_path, f), dtype=dtypes_sap)
+            df = pd.read_excel(os.path.join(input_path, f), dtype=dtypes_sap, parse_dates=fechas)
             file_name = file_name+"csv"
-            df.to_csv(os.path.join(output_path, file_name))
+            df.to_csv(os.path.join(output_path, file_name), index=False)
             print(str(file_name)+" created")
 
 def read_path(input_all_paths, denomination):
