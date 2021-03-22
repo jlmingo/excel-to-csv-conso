@@ -42,7 +42,7 @@ def main():
 
         #checking if file name is equal to column Posición liquidez
         file_name = f[:-4]
-        posicion_liquidez=list(df['Posición liquidez'].unique())
+        posicion_liquidez=list(df['Liquidity Item'].unique())
         with open(check_file, "a") as txt:
             if len(posicion_liquidez) > 1:
                 txt.write(f+" Posición liquidez tiene más de un valor único.\n")
